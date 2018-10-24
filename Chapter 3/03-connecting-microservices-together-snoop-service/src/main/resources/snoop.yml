@@ -1,0 +1,6 @@
+snoop:
+   host: http://localhost
+   port: 8080
+   serviceRoot: weather-snoop-service/weather
+   snoopService: localhost:8080/snoop-service/
+  

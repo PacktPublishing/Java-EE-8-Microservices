@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Client for the Forecast service</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="results">
+
+        </div>
+        <h1 id="title">Server-Sent Events not supported by this browser, try with another browser</h1>
+        <script>
+            if (isSseSupportedByBrowser()) {
+                // Server-sent events support
+
+                setMessage("Forecast service called, waiting for results...");
+
+                var source = new EventSource("smartcity/forecast");
+                source.onmessage = function (event) {
+                    if (event.lastEventId === "completed") {
+                        setMessage("Forecast service call completed, all results are above.");
+                        source.close();
+                    } else {
+                        appendData(event.data);
+                    }
+                };
+                source.onerror = function () {
+                    console.log("error");
+                    source.close();
+                }
+            }
+
+            function appendData(data) {
+                document.getElementById("results").innerHTML += data + "<br><br>";
+            }
+
+            function isSseSupportedByBrowser() {
+                return typeof (EventSource) !== "undefined";
+            }
+
+            function setMessage(message) {
+                document.getElementById("title").innerHTML = message;
+            }
+        </script>
+    </body>
+</html>

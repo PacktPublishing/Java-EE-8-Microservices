@@ -1,0 +1,34 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.packtpub.microservices</groupId>
+    <artifactId>javaee8-microservices-book</artifactId>
+    <version>1.0</version>
+    <packaging>pom</packaging>
+    <modules>
+        <module>common</module>
+        <module>02-creating-your-first-microservice-javaee</module>
+        <module>02-creating-your-first-microservice-spring</module>
+        <module>03-connecting-microservices-together-javaee</module>
+        <module>03-connecting-microservices-together-snoop-service</module>
+        <module>03-connecting-microservices-together-snoop-client</module>
+        <module>03-connecting-microservices-together-2-services</module>
+        <module>03-connecting-microservices-together-eureka-server</module>
+        <module>03-connecting-microservices-together-eureka-service</module>
+        <module>03-connecting-microservices-together-eureka-client</module>
+        <module>04-async-microservices-async</module>
+        <module>04-async-microservices-async-rxjava</module>
+        <module>04-async-microservices-SSE</module>
+        <module>04-async-microservices-SSE-rx</module>
+        <module>04-async-microservices-SSE-rxjava</module>
+        <module>04-async-microservices-SSE-client</module>
+        <module>04-async-microservices-web-socket</module>
+        <module>04-async-microservices-web-socket-client</module>
+        <module>07-securing-microservices-javaee</module>
+        <module>07-weather-service-spring-secured-basic-auth</module>
+        <module>07-weather-service-spring-secured-basic-auth-with-prop-file</module>
+        <module>07-weather-service-spring-secured-with-custom-config</module>
+        <module>07-weather-service-spring-secured-with-db-realm</module>
+        <module>10-OpenLiberty.io</module>
+    </modules>
+</project>
