@@ -1,0 +1,7 @@
+{
+  "name": "Calculator App",
+  "version": "1.0.0",
+  "description": "This app is used to implement Calculator functions",
+  "title": "Calculator",
+  "url" : "https://packt.mycalculator.com/v1"
+}
